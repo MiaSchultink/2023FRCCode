@@ -20,6 +20,9 @@ public class Robot extends TimedRobot {
   private RobotContainer m_robotContainer;
   public static final CTREConfigs ctreConfigs = new CTREConfigs();
 
+  private static long startTime;
+  public static long timeSinceStart;
+
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
@@ -29,6 +32,8 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
+    timeSinceStart = 0;
+    startTime = System.currentTimeMillis();
   }
 
   /**
@@ -38,6 +43,7 @@ public class Robot extends TimedRobot {
    * <p>This runs after the mode specific periodic functions, but before LiveWindow and
    * SmartDashboard integrated updating.
    */
+
   @Override
   public void robotPeriodic() {
     // Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled
@@ -45,6 +51,11 @@ public class Robot extends TimedRobot {
     // and running subsystem periodic() methods.  This must be called from the robot's periodic
     // block in order for anything in the Command-based framework to work.
     CommandScheduler.getInstance().run();
+  }
+
+  public static long getTimeSinceStart(){
+    timeSinceStart = System.currentTimeMillis() - startTime;
+    return timeSinceStart;
   }
 
   /** This function is called once each time the robot enters Disabled mode. */
@@ -67,7 +78,9 @@ public class Robot extends TimedRobot {
 
   /** This function is called periodically during autonomous. */
   @Override
-  public void autonomousPeriodic() {}
+  public void autonomousPeriodic() {
+
+  }
 
   @Override
   public void teleopInit() {
@@ -82,7 +95,9 @@ public class Robot extends TimedRobot {
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    
+  }
 
   @Override
   public void testInit() {

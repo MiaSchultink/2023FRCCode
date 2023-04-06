@@ -1,6 +1,8 @@
 
 package frc.lib.math;
 
+import java.util.concurrent.TimeUnit;
+
 public class Conversions {
 
     /**
@@ -72,6 +74,16 @@ public class Conversions {
         double wheelRevs = (falconTicks / 2048.0) / gearRatio;
         double meters = wheelRevs * circumference;
         return meters;
+    }
+
+    public static long secondsToMili(double sec){
+        long longSeconds = (long)sec;
+        long mili = TimeUnit.SECONDS.toMillis(longSeconds);
+        return mili;
+    }
+    public static double miliToSeconds(long mili){
+        double seconds = TimeUnit.MILLISECONDS.toSeconds(mili);
+        return seconds;
     }
 
 }

@@ -40,6 +40,8 @@ public final class Constants {
         public static final double drivePeakCurrentDuration = 0.1;
         public static final boolean driveEnableCurrentLimit = true;
 
+        public static final double backupTime = 2.8;
+
 
         public static final class Mod1 {
             public static final int driveMotorId = 1;
@@ -88,6 +90,7 @@ public final class Constants {
         public static final double maxSpeed = 6.34345;
         public static final double maxExtention = 113.0;
         public static final double maxRetraction = 25.6;
+
     }
     public static final class Intake{
         public static final int intakeMotorID = 34;
@@ -95,6 +98,9 @@ public final class Constants {
         public static final int limitSwitch1Channel = 1;
         public static final int limitSwitch2Channel = 2;
         public static final int relayChannel = 3;
+
+        public static final double autoSpeed = 0.8;
+        public static final double intakeAutoRunTime = 2;
     }
     public static final class Pivot{
         public static final int mainPivotMotorID = 2;
@@ -107,6 +113,27 @@ public final class Constants {
 
     public static final class Cotnrollers{
         public static final int copilotPort = 3;
+    }
+
+    public static final class Auto{
+        public static final double pivotSpeed = 0.6;
+        public static final double armSpeed = 0.3;
+        public static final double intakeSpeed = 0.8;
+
+        public static final double backupTime = 2.8;
+        public static final double outTakeTime = 2;
+
+        public static final double pivotTopConePos = 234.5;
+        public static final double pivotTopCubePos = 228.9;
+        public static final double pivotMidCubePos = 134.5;
+        public static final double pivotMidConePos = 155.6;
+
+        public static final double armTopCubePos = 235.6;
+        public static final double armTopConePos = 345.7;
+        public static final double armMidCubePos = 244.5;
+        public static final double armMidConePos = 265.4;
+
+
     }
 
 }

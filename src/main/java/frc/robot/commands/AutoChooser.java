@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 public class AutoChooser extends CommandBase {
     static AutoChooser instance;
     SendableChooser<String> chooser;
+
     
     public AutoChooser(){
         chooser = new SendableChooser<>();
