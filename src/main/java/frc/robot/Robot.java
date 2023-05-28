@@ -147,6 +147,7 @@ public class Robot extends TimedRobot {
     if (copliController.getLeftBumper()) {
       intake.moveChin(-Constants.Intake.chinSpeed);
     }
+    
 
   }
 
