@@ -1,12 +1,8 @@
 package frc.robot.commands;
 
-import org.apache.commons.lang3.Conversion;
-
-import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.lib.math.Conversions;
 import frc.robot.Constants;
-import frc.robot.Robot;
 import frc.robot.subsystems.Intake;
 
 public class AutoMoveIntake extends CommandBase{
