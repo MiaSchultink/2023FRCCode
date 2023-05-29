@@ -37,6 +37,10 @@ public class TelescopicArm extends SubsystemBase {
     public void moveArm(double speed){
        extendMotor.set(speed);
     }
+
+    public void stop(){
+        extendMotor.set(0);
+    }
     
     public double getArmEncoderValue(){
         return extendMotor.getEncoder().getPosition();

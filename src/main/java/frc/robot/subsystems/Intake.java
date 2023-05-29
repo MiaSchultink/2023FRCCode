@@ -46,7 +46,7 @@ public class Intake extends SubsystemBase {
     @Override
     public void periodic(){
         if(limitSwitch1.get() || limitSwitch2.get()){
-            this.stopIntake();
+            this.stop();
             intakeRelay.set(Value.kOn);
         }
         else{
@@ -79,7 +79,7 @@ public class Intake extends SubsystemBase {
         chinMotor.set(speed);
     }
 
-    public void stopIntake(){
+    public void stop(){
         intakeMotor.set(0);
     }
 
